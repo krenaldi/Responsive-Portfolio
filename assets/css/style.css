@@ -170,3 +170,45 @@ input[type=text] {
   input[type=submit]:active {
     background-color: #4882B8;
   }
+  /* On screens that are 980px wide or less*/
+@media screen and (max-width: 980px) {
+  .container {
+    width: 750px;
+}
+.main-section {
+    width: 750px;
+   } 
+}
+
+/* On screens that are 768px wide or less, make the column narrower */
+@media screen and (max-width: 768) {
+  .container {
+    width: 600px;
+}
+.main-section {
+    width: 600px;
+   }  
+}
+/* On screens that are 640px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 640px) {
+  body {
+    background-image: none;
+  }
+  .container {
+    width: 100%;
+}
+.main-section {
+    width: 100%;
+    overflow: none;
+   }
+   .name {
+    width: 640px;
+    text-align: center;
+  
+   }
+   nav {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }  
+}
