@@ -1,17 +1,28 @@
+/* Main body format */
+
 body {
     background-image: url(../images/concrete_seamless.png);
-    overflow: auto;
-}
-
-h1{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-nav,
-p,
-label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 34px;
     color: #777777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, 
+h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/* header */
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    height: 75px;
+    margin: -10px -10px 0 -10px;
 }
 .name {
     position: relative;
@@ -23,43 +34,46 @@ label {
     float: left;
     text-align: center;
 }
-.navbar {
-    margin: 0;
-    padding: 10px;
+
+/* navbar */
+nav {
     float: right;
 }
-a {
-    text-decoration-line: none;
-    color: #ffffff; 
-}
-a.link {
-    text-decoration-line: none;
+nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
     color: #777777;
-}
-a.link:hover {
-    font-weight: bold;
-}
-header {
-    background-color: #ffffff;
-    border-bottom: 2px solid #cccccc;
-    height: 75px;
-    margin: -10px -10px 0 -10px;
+    text-decoration-line: none;
+    border-left: 1px solid #efefef;
 }
 
-.wrapper {
+/* removes left border from About link in navbar */
+nav a:first-child {
+  border-left: 0 none;
+}
+
+nav a:hover {
+    font-weight: bold;
+} 
+
+
+.container {
     width: 960px;
     padding: 20px;
     margin: 0 auto;
 }
-.main-wrapper {
+.main-section {
     width: 960px;
     background-color: #ffffff;
-    padding: 0 20px 25px 20px;
+    padding: 0 20px 35px 20px;
     border: 2px solid #dddddd;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     overflow: auto;
-    clear: both;
+
 }
 #bio-image {
     width: 200px;
@@ -67,6 +81,8 @@ header {
     margin-right: 20px;
     float: left;
   }
+
+  /* footer */
   footer {
     position: fixed;
     bottom: 0; 
@@ -75,25 +91,31 @@ header {
     background-color: #666666;
     color: #ffffff;
     border-top: 8px solid #4aaaa5;
-    height: 40px;
+    height: 50px;
     text-align: center;
-    font-size: x-small;
+    font-size: 12px;
+    line-height: 9px;
     z-index: 2;
 }
+
+/* portfolio page */
 .portfolio-image {
     position: relative;
     width: 300px;
     height: 200px;
     margin: 20px 30px 20px 0;
     float: left;
+    border: 0 none;
+    opacity: 0.8;
   }
 div.portfolio-banner {
     position: absolute;
     width: 300px;
     height: 40px;
     background-color: #4aaaa5;
+    font-family: Georgia, Times, "Times New Roman", serif;
     color: #ffffff;
-    padding-top: 15px;
+    padding-top: 2px;
     text-align: center;
     z-index: 1;
     margin-right: 0;
@@ -102,6 +124,12 @@ div.portfolio-banner {
 div.portfolio-banner:hover {
     background-color: #4882B8;
 }
+
+.portfolio-image:hover {
+  opacity: 1.0;
+}
+
+/* contact page */
 input[type=text] {
     width: 100%;
     padding: 10px 10px;
